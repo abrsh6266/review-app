@@ -22,7 +22,8 @@ const App = () => {
   const randomPerson = () => {
     let ind = Math.floor(Math.random() * people.length);
     if (ind === index) ind = ind + 1;
-    setIndex(checkNumber(ind));
+    const ne = ind % people.length
+    setIndex(ne);
   };
   return (
     <main>
